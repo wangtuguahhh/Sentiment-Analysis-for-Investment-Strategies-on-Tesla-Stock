@@ -1,0 +1,6 @@
+# ignore all.ipynb_checkpoints
+**/.ipynb_checkpoints/
+# ignore the trainer history
+notebook/binary_training_results/
+# ignore the config file
+notebook/config.ini
