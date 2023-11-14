@@ -10,14 +10,14 @@ APIs are very convinent way to collect required data in this task. The following
 * [NewsAPI](https://newsapi.org/) (limited to past 30 days)
 * [marketstack](https://marketstack.com/)
 
-In this task, data from the past **30 days** are evaluated. The time period is from **2023-10-11** to **2023-9-12**.
+In this task, data from the past **30 days** are evaluated. The time period is from **2023-09-12** to **2023-10-11**.
 
 ## 2. Method
 After collecting the news, some manual labeling were performed for 60% of the news articles. Some articles were found not directly related to Tesla but related to Elon Musk's personal life, his political opinions and his other companies. Therefore, a classification tool is required to tell if a news is directly related to Tesla or not.
 
 ✨ **Flan-T5** model, a LLM developed by Google to handle text2text generation tasks, such as translation and summarization was chosen for this task. The model size is 248M parameters. In order to perform required classification task on news, tuning is needed for this model. The following methods were implemented:
 * [Prompt Engineering / In-Context Learning](https://github.com/wangtuguahhh/Sentiment-Analysis-for-Investment-Strategies-on-Tesla-Stock/blob/33746f5045a6ece519ab6f5e0d9205aeb82a640d/notebook/02_News_Classification_with_Prompt_Engineering_Flan_T5.ipynb)
-* Fine-tuning the model with manual labels
+* Fine-tuning the model with manual labels (not tried yet due to limited number of data)
 
 ✨ **FinBERT** model, a LLM developed for financial sentiment analysis with BERT, was used for sentiment analysis of news related to Tesla
 
