@@ -1,5 +1,5 @@
 ![image](https://github.com/wangtuguahhh/Sentiment-Analysis-for-Investment-Strategies-on-Tesla-Stock/assets/130683390/dc0161c2-98d2-4d79-b945-afc454476406)
-# Sentiment-Analysis-for-Investment-Strategies-on-Tesla-Stock
+# News Analysis for Potential Investment Strategies on Tesla Stock
 
 Investiment strategy on certain stocks is a challenging topic and of keen interest to a wide audience. The stock market, with its inherent complexity and unpredictability, presents a fascinating area for machine learning exploration. Its difficulty in prediction stems from a multitude of factors including economic indicators, global events, investor behavior, and market speculation, all of which contribute to its volatile nature.
 
@@ -94,8 +94,57 @@ Here is the plot with individual positive rates and negative rates.
   * This trend suggests that technology-focused publishers generally maintain a positive stance towards Tesla.
   * Major publishers from specific countries appeared to be more positive in their coverage of Tesla, which could indicate a favorable disposition towards providing Tesla with better opportunities.
 
-[Sentiment Analysis Notebook](https://github.com/wangtuguahhh/Sentiment-Analysis-for-Investment-Strategies-on-Tesla-Stock/blob/2a77bf68c85d0481bb3a82af48f8c2614aab3c9c/notebook/03_Sentiment_Analysis_with_FinBERT.ipynb)
+[*Sentiment Analysis Notebook*](https://github.com/wangtuguahhh/Sentiment-Analysis-for-Investment-Strategies-on-Tesla-Stock/blob/2a77bf68c85d0481bb3a82af48f8c2614aab3c9c/notebook/03_Sentiment_Analysis_with_FinBERT.ipynb)
 
-## Correlation with Stock Price
+## 6. Correlation with Stock Price
+From Pearson Correlation calculations, the correlation coefficient between open price and positive news number is large, around 0.68. Here is the plot of trends of those two values normalized.
 
-## 6. Future Improvements
+![image](https://github.com/wangtuguahhh/Sentiment-Analysis-for-Investment-Strategies-on-Tesla-Stock/assets/130683390/0ac53ece-a1af-4b9e-894f-56f6b054ace9)
+
+There were some similaries between the two trend lines. Next will shift the positive numbers number by 1 day to check its impact on next day's open price.
+
+![image](https://github.com/wangtuguahhh/Sentiment-Analysis-for-Investment-Strategies-on-Tesla-Stock/assets/130683390/598a5543-496e-434d-9950-411e4b103aa2)
+
+There is no clear correlation between today's open price with yesterday's number of positive news. Next let's investigate the impact from both positive and negative news on Tesla stock price change.
+
+![image](https://github.com/wangtuguahhh/Sentiment-Analysis-for-Investment-Strategies-on-Tesla-Stock/assets/130683390/8a8bec44-e0b0-43fc-91f1-3b7449e5c7d3)
+![image](https://github.com/wangtuguahhh/Sentiment-Analysis-for-Investment-Strategies-on-Tesla-Stock/assets/130683390/e60028f2-f32c-45b2-af72-1d617dd1ba47)
+
+* The stock price movements correlated with the previous-day news sentiment the best though quite some mis-match.
+* News accumulated from more than 1 days were also evaluated. however, the impact from negative sentiments was exaggerated if averaging impact from previous days.  
+* Ignoring the neutral news and relying on the raw difference between positive and negative didn't correlate well with the stock price movements.
+
+[*Stock Price Correlation Notebook*](https://github.com/wangtuguahhh/Sentiment-Analysis-for-Investment-Strategies-on-Tesla-Stock/blob/2a77bf68c85d0481bb3a82af48f8c2614aab3c9c/notebook/03_Sentiment_Analysis_with_FinBERT.ipynb)
+
+## 7. Future Improvements
+🔭 **Observations:**
+* With help of prompt engineering and fine-tuning, we can facilitate open-source LLMs to work on a particular task of interest.
+    * **In this work, we imporve Flan-T5 model performance on classifying if a news is related to Tesla or not using one-shot learning method.**
+* Most of the news in the past 30 days were neutral to Tesla.
+* Ignoring the neutral news, there were more negative news for Tesla in the past 30 days compared to positive ones.
+* There is no clear strong correlation between the news sentiments and the stock market price movements.
+
+🧰 **Limitations:**
+* The news classification is not perfect. The around was around 0.85 for the Flan-T5 model with in-context learning technique applied.
+
+* The sentiment analysis from FinBERT model is not appropriate.
+    * Comparing to human labels, FinBERT model tended to label positive news as neutral ones.
+    * FinBERT model was pretrained using finance corpus for sentiment analysis based on BERT.
+    * The manual labeling paid more attention to potential impact on Tesla stock price, which is challenging to FinBERT.
+        * For example, there were news articles on other EV makers adapting to the battery charging system developed by Tesla. I labeled such news as positive since the adaption change from other EV makers could bring potential developments and more market shares of Tesla in the EV charging system section. However, FinBERT treated those as neutral news.
+    * **The NLP taks here is no longer simple sentiment analysis on a piece of context. It required us to generate a tool to predict the potential impact of news on Tesla's stock price with help from LLMs.**
+
+* There are multiple and complex factors that will impact the stock price of a company. 
+    * Market-related facors such as GDP, interest rates, inflation, employment rate, indicate how well the whole market is performing and they will have a signifcant impact on individual stocks. 
+    * Company reports showing how the company performed in the past period of time is importance to its stock price. Earnings, dividens, debts, management qualities and etc. are key components to drive the stock price movement. 
+    * Other factors such as global economy, regulations and goverment policies, industry-specific changes and natural disasters and pandemics all play a role here.
+
+🍀 **Future Work:**
+* Collecting data for a longer period of time:
+    * then can try fine-tuning LLMs for classification and sentiment analysis
+    * to see if there is any long-term trend between the news sentiments and the stock price movement.
+* Tuning LLMs with generative capabilities, such as Flan-T5 to achieve the task of predicting the impact of a news on Tesla's stock price.
+    * try ICL first
+    * try fine-tuning if more data are available
+* Incorporate other factors mentioned in the not considered section.
+* Create a Tesla stock investigation AI tool for user.
