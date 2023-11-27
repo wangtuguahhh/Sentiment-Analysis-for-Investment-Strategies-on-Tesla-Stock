@@ -94,7 +94,7 @@ Here is the plot with individual positive rates and negative rates.
   * This trend suggests that technology-focused publishers generally maintain a positive stance towards Tesla.
   * Major publishers from specific countries appeared to be more positive in their coverage of Tesla, which could indicate a favorable disposition towards providing Tesla with better opportunities.
 
-[*Sentiment Analysis Notebook*](https://github.com/wangtuguahhh/Sentiment-Analysis-for-Investment-Strategies-on-Tesla-Stock/blob/2a77bf68c85d0481bb3a82af48f8c2614aab3c9c/notebook/03_Sentiment_Analysis_with_FinBERT.ipynb)
+[*Sentiment Analysis Notebook*](https://github.com/wangtuguahhh/Sentiment-Analysis-for-Investment-Strategies-on-Tesla-Stock/blob/b90d39920a1bb735de8080f88d32b48ba7d37a3a/notebook/04_Sentiment_Analysis_with_FinBERT.ipynb)
 
 ## 6. Correlation with Stock Price
 From Pearson Correlation calculations, the correlation coefficient between open price and positive news number is large, around 0.68. Here is the plot of trends of those two values normalized.
@@ -114,7 +114,7 @@ There is no clear correlation between today's open price with yesterday's number
 * News accumulated from more than 1 days were also evaluated. however, the impact from negative sentiments was exaggerated if averaging impact from previous days.  
 * Ignoring the neutral news and relying on the raw difference between positive and negative didn't correlate well with the stock price movements.
 
-[*Stock Price Correlation Notebook*](https://github.com/wangtuguahhh/Sentiment-Analysis-for-Investment-Strategies-on-Tesla-Stock/blob/2a77bf68c85d0481bb3a82af48f8c2614aab3c9c/notebook/03_Sentiment_Analysis_with_FinBERT.ipynb)
+[*Stock Price Correlation Notebook*](https://github.com/wangtuguahhh/Sentiment-Analysis-for-Investment-Strategies-on-Tesla-Stock/blob/b90d39920a1bb735de8080f88d32b48ba7d37a3a/notebook/04_Sentiment_Analysis_with_FinBERT.ipynb)
 
 ## 7. Future Improvements
 🔭 **Observations:**
