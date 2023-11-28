@@ -1,4 +1,4 @@
-,date,positive_num,negative_num,nuetral_num,positive_rate,negative_rate,neutral_rate,open,close,inday_move,yesterday_move,open_norm,positive_num_norm,positive_num_norm_shift_1,pos_neg_diff,diff_past
+,date,positive_num,negative_num,nuetral_num,positive_rate,negative_rate,neutral_rate,open,close,inday_move,yesterday_move,open_norm,positive_num_norm,positive_num_norm_shift_1,pos_neg_diff,pos_neg_diff_shift_1
 0,2023-09-12,2.0,0.0,5.0,0.2857142857142857,0.0,0.7142857142857143,270.76,267.48,-3.2799999999999727,-6.099999999999966,0.8190780708766315,0.3333333333333333,,2.0,
 1,2023-09-13,2.0,1.0,12.0,0.1333333333333333,0.0666666666666666,0.8,270.07,271.3,1.2300000000000182,3.819999999999993,0.8006927791100448,0.3333333333333333,0.3333333333333333,1.0,2.0
 2,2023-09-14,2.0,4.0,4.0,0.2,0.4,0.4,271.32,276.04,4.720000000000027,4.740000000000009,0.8339994670929918,0.3333333333333333,0.3333333333333333,-2.0,1.0
