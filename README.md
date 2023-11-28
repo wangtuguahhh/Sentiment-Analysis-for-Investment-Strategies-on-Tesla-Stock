@@ -5,6 +5,8 @@ Investiment strategy on certain stocks is a challenging topic and of keen intere
 
 Leveraging advanced Large Language Models (LLMs) presents an innovative approach to this task. LLMs enable the rapid processing and interpretation of vast amounts of news information. My goal in this project is to conduct a thorough sentiment analysis of news related to Tesla in a short period of time, aiming to uncover any potential correlations between public sentiment in the news and fluctuations in Tesla's stock price. This endeavor not only poses a significant challenge but also holds the promise of offering novel insights into the complicated dynamics between media sentiment and stock market movements.
 
+[Streamit Interactive Dashboard](https://streamitteslaproject-etmtdkqdsy9dnwhucpwxrg.streamlit.app/)
+
 ## 1. Data
 APIs are very convinent way to collect required data in this task. The following APIs are used:
 * [NewsAPI](https://newsapi.org/) (limited to past 30 days)
@@ -16,8 +18,8 @@ In this task, data from the past **30 days** are evaluated. The time period is f
 After collecting the news, some manual labeling were performed for 60% of the news articles. Some articles were found not directly related to Tesla but related to Elon Musk's personal life, his political opinions and his other companies. Therefore, a classification tool is required to tell if a news is directly related to Tesla or not.
 
 ✨ **Flan-T5** model, a LLM developed by Google to handle text2text generation tasks, such as translation and summarization was chosen for this task. The model size is 248M parameters. In order to perform required classification task on news, tuning is needed for this model. The following methods were implemented:
-* [Prompt Engineering / In-Context Learning](https://github.com/wangtuguahhh/Sentiment-Analysis-for-Investment-Strategies-on-Tesla-Stock/blob/33746f5045a6ece519ab6f5e0d9205aeb82a640d/notebook/02_News_Classification_with_Prompt_Engineering_Flan_T5.ipynb)
-* Fine-tuning the model with manual labels (not tried yet due to limited number of data)
+* [Prompt Engineering / In-Context Learning for LLM](https://github.com/wangtuguahhh/Sentiment-Analysis-for-Investment-Strategies-on-Tesla-Stock/blob/33746f5045a6ece519ab6f5e0d9205aeb82a640d/notebook/02_News_Classification_with_Prompt_Engineering_Flan_T5.ipynb)
+* [Parameter Efficient Fine-tuning (LoRA) for LLM](https://github.com/wangtuguahhh/Sentiment-Analysis-for-Investment-Strategies-on-Tesla-Stock/blob/3ce1a95e5cb45823cb890ef99e2ad34e738536b5/notebook/03_News_Classification_with_PEFT_LoRA_Flan_T5.ipynb) (not working well due to limited number of data)
 
 ✨ **FinBERT** model, a LLM developed for financial sentiment analysis with BERT, was used for sentiment analysis of news related to Tesla
 
@@ -94,7 +96,7 @@ Here is the plot with individual positive rates and negative rates.
   * This trend suggests that technology-focused publishers generally maintain a positive stance towards Tesla.
   * Major publishers from specific countries appeared to be more positive in their coverage of Tesla, which could indicate a favorable disposition towards providing Tesla with better opportunities.
 
-[*Sentiment Analysis Notebook*](https://github.com/wangtuguahhh/Sentiment-Analysis-for-Investment-Strategies-on-Tesla-Stock/blob/2a77bf68c85d0481bb3a82af48f8c2614aab3c9c/notebook/03_Sentiment_Analysis_with_FinBERT.ipynb)
+[*Sentiment Analysis Notebook*](https://github.com/wangtuguahhh/Sentiment-Analysis-for-Investment-Strategies-on-Tesla-Stock/blob/b90d39920a1bb735de8080f88d32b48ba7d37a3a/notebook/04_Sentiment_Analysis_with_FinBERT.ipynb)
 
 ## 6. Correlation with Stock Price
 From Pearson Correlation calculations, the correlation coefficient between open price and positive news number is large, around 0.68. Here is the plot of trends of those two values normalized.
@@ -114,7 +116,7 @@ There is no clear correlation between today's open price with yesterday's number
 * News accumulated from more than 1 days were also evaluated. however, the impact from negative sentiments was exaggerated if averaging impact from previous days.  
 * Ignoring the neutral news and relying on the raw difference between positive and negative didn't correlate well with the stock price movements.
 
-[*Stock Price Correlation Notebook*](https://github.com/wangtuguahhh/Sentiment-Analysis-for-Investment-Strategies-on-Tesla-Stock/blob/2a77bf68c85d0481bb3a82af48f8c2614aab3c9c/notebook/03_Sentiment_Analysis_with_FinBERT.ipynb)
+[*Stock Price Correlation Notebook*](https://github.com/wangtuguahhh/Sentiment-Analysis-for-Investment-Strategies-on-Tesla-Stock/blob/b90d39920a1bb735de8080f88d32b48ba7d37a3a/notebook/04_Sentiment_Analysis_with_FinBERT.ipynb)
 
 ## 7. Future Improvements
 🔭 **Observations:**
