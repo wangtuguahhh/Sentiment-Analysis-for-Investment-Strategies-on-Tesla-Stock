@@ -1,11 +1,11 @@
 ![image](https://github.com/wangtuguahhh/Sentiment-Analysis-for-Investment-Strategies-on-Tesla-Stock/assets/130683390/dc0161c2-98d2-4d79-b945-afc454476406)
 # News Analysis for Potential Investment Strategies on Tesla Stock
 
-Investiment strategy on certain stocks is a challenging topic and of keen interest to a wide audience. The stock market, with its inherent complexity and unpredictability, presents a fascinating area for machine learning exploration. Its difficulty in prediction stems from a multitude of factors including economic indicators, global events, investor behavior, and market speculation, all of which contribute to its volatile nature.
+Investment strategy on certain stocks is a challenging topic and of keen interest to a wide audience. The stock market, with its inherent complexity and unpredictability, presents a fascinating area for machine learning exploration. Its difficulty in prediction stems from a multitude of factors including economic indicators, global events, investor behavior, and market speculation, all of which contribute to its volatile nature.
 
 Leveraging advanced Large Language Models (LLMs) presents an innovative approach to this task. LLMs enable the rapid processing and interpretation of vast amounts of news information. My goal in this project is to conduct a thorough sentiment analysis of news related to Tesla in a short period of time, aiming to uncover any potential correlations between public sentiment in the news and fluctuations in Tesla's stock price. This endeavor not only poses a significant challenge but also holds the promise of offering novel insights into the complicated dynamics between media sentiment and stock market movements.
 
-[Streamit Interactive Dashboard](https://streamitteslaproject-etmtdkqdsy9dnwhucpwxrg.streamlit.app/)
+[Streamit Interactive Dashboard](https://streamitteslaproject-cv6tnge82hewwmf6cttecw.streamlit.app/)
 
 ## 1. Data
 APIs are very convinent way to collect required data in this task. The following APIs are used:
