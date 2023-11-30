@@ -5,7 +5,7 @@ Investment strategy on certain stocks is a challenging topic and of keen interes
 
 Leveraging advanced Large Language Models (LLMs) presents an innovative approach to this task. LLMs enable the rapid processing and interpretation of vast amounts of news information. My goal in this project is to conduct a thorough sentiment analysis of news related to Tesla in a short period of time, aiming to uncover any potential correlations between public sentiment in the news and fluctuations in Tesla's stock price. This endeavor not only poses a significant challenge but also holds the promise of offering novel insights into the complicated dynamics between media sentiment and stock market movements.
 
-The final analysis dashboard of Tesla related news, Tesla stock price movements and their correlations are deployed on `streamlit.sharing`.
+The final analysis dashboard of Tesla related news, Tesla stock price movements and their correlations are deployed on `streamlit.sharing`. Feel free to check it out and play with it through the link below!
 
 [Final Analysis Dashboard](https://streamitteslaproject-cv6tnge82hewwmf6cttecw.streamlit.app/)
 
